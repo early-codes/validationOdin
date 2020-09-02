@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Odin Validation</title>
+    <meta name="author" content="lkrbalci" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="formInnerDiv">
+          <h1>E-mail</h1>
+          <input type="email" id="email" />
+          <h1>Country</h1>
+          <input type="text" id="country" pattern="[A-Za-z]{1,20}" required />
+          <h1>Zip Code</h1>
+          <input type="text" id="zipcode" pattern="[1-9]{5}" required />
+          <h1>Password</h1>
+          <input
+            type="password"
+            id="pass1"
+            pattern="^(?=.*[A-Z])(?=.*[1-9])(?=.*[a-z]).{8,}$"
+            required
+          />
+          <h1>Verify Password</h1>
+          <input
+            type="password"
+            id="pass2"
+            pattern="^(?=.*[A-Z])(?=.*[1-9])(?=.*[a-z]).{8,}$"
+            required
+          />
+        </div>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    height: 70vh;
+    width: 70vw;
+    margin: 30px auto;
+  }
+</style>
